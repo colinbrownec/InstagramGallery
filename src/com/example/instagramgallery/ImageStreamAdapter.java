@@ -83,7 +83,10 @@ public class ImageStreamAdapter extends BaseAdapter {
 	        	other.cancel(false);
 
 			String url = imageData.getJSONArray("data").getJSONObject(position).getJSONObject("images").getJSONObject("thumbnail").getString("url");
-			task.execute(url);
+			
+			if (!task.searchCache(url))
+				task.execute(url);
+			
 		} catch (JSONException e) {
 
 		}
