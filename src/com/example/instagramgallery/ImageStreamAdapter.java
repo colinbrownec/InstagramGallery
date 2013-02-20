@@ -32,7 +32,6 @@ public class ImageStreamAdapter extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
 		try {
 			return imageData.getJSONArray("data").length();
 		} catch (JSONException e) {
@@ -43,7 +42,6 @@ public class ImageStreamAdapter extends BaseAdapter {
 
 	@Override
 	public Object getItem(int position) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
